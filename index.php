@@ -59,7 +59,7 @@
         const queryParams = new URLSearchParams(window.location.search);
         if (queryParams.has('url')) {
           const url = setURL(queryParams); //format final URL, if needed
-          loadGTM(url); //callback invokes submitRedirect(url)
+          loadGoogleTag(url); //callback invokes submitRedirect(url)
         }
       });
 
@@ -87,10 +87,10 @@
       }
 
       /**
-       * Load GTM tag, send page_view, and call submitRedirect(url).
+       * Load Google tag, send page_view, and call submitRedirect(url).
        * @param {string} url - https URL to redirect to.
        */
-      function loadGTM(url) {
+      function loadGoogleTag(url) {
         const script = document.createElement('script');
         script.src = 'https://www.googletagmanager.com/gtag/js?id=G-MVLS2ZX0C5';
         document.head.appendChild(script);

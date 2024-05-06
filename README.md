@@ -6,15 +6,9 @@ The application looks for a query key called "url" that can be a redirect addres
 
 Example requests:
 
-'''
-
-http://localhost/dev/nav/?url=https://video.klrn.org/video/call-the-midwife-season-13-episode-1/
-
-http://localhost/dev/nav/?url=klrn-passport-donation
-
-http://localhost/dev/nav/?url=klrn-passport-donation&referrer=pbsvideo://video.klrn.org/video/call-the-midwife-season-13-episode-1/
-
-'''
+- http://localhost/dev/nav/?url=https://video.klrn.org/video/call-the-midwife-season-13-episode-1/
+- http://localhost/dev/nav/?url=klrn-passport-donation
+- http://localhost/dev/nav/?url=klrn-passport-donation&referrer=pbsvideo://video.klrn.org/video/call-the-midwife-season-13-episode-1/
 
 ## Code overview
 

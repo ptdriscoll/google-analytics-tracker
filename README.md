@@ -16,6 +16,11 @@ Example requests:
 
 **loadGoogleTag(url):** Google tag is loaded, a page_view event is sent to Google Tag Manager, a `submitRedirect` function is invoked in the event_callback, and as a backup a `setTimeout` will call `submitRedirect` if the Google tag takes too long to load.
 
+**Google Tag Manager ID:** In the `loadGoogleTag(url)` function there are two lines that include a Google Tag Manager ID, which needs to be customized to identify a specific GTM account:
+
+- `script.src = 'https://www.googletagmanager.com/gtag/js?id=<GTM-ID>';`
+- `gtag('config', <GTM-ID>', { ...`
+
 **submitRedirect(url):** A form is created and submitted to the server to send the redirect URL as a post, and at the top of the page PHP looks for `$\_POST['url']` and, when set, makes the redirect.
 
 **loader:** CSS and keyframes turn a div element into a loading spinner that shows, if needed, until the redirect.
